@@ -90,10 +90,10 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\hmwkTitle}{POP \#12} % Assignment title
-\newcommand{\hmwkDueDate}{Friday,\ February\ 10,\ 2017} % Due date
+\newcommand{\hmwkDueDate}{Friday,\ 10th of February,\ 2017} % Due date
 \newcommand{\hmwkClass}{Softwareudvikling} % Course/class
 \newcommand{\hmwkClassTime}{} % Class/lecture time
-\newcommand{\hmwkClassInstructor}{Joachim} % Teacher/lecturer
+\newcommand{\hmwkClassInstructor}{Mads Svendsen} % Teacher/lecturer
 \newcommand{\hmwkAuthorName}{Matti Andreas Nielsen} % Your name
 
 
@@ -122,9 +122,9 @@
 \vspace{\drop} % Whitespace between the top lines and title
 \centering % Center all text
 \textcolor{Black}{ % Red font color
-{\Huge Programmering og Problemløsning}\\[0.5\baselineskip] % Title line 1
-{\Large Opgave 12}\\[0.75\baselineskip] % Title line 2
-{\Huge \textsc{Matti Andreas Nielsen}}}\par % Author name
+{\Huge Softwareudvikling}\\[0.5\baselineskip] % Title line 1
+{\Large Opgave 1}\\[0.75\baselineskip] % Title line 2
+{\Huge \textsc{Matti Nielsen, Oscar Nelin, Minh Tran }}}\par % Author name
 
 \vspace{0.25\drop} % Whitespace between the title and short horizontal line
 \rule{0.3\textwidth}{0.4pt}\par % Short horizontal line under the title
@@ -160,31 +160,5 @@ Kør programmet med 'make compile'
 
 \section{Beskrivelse af programmet}
 
-Jeg har valgt af opdele programmet med en composit pattern kaldt MVC, så jeg har så vidt muligt prøvet at ligge alt der har med winforms at gøre ind i et namespace
-kaldt GrayScaleHistogram.Views. Så har jeg lagt alt mit histogram logik og fil læsning ind i et namespace der hedder GrayScaleHistogram.Controllers.
-Disse to namespaces bliver importeret af min Main/Run.fsx fil, som kalder controllerens metoder, og passer så resultatet af disse ind i min winforms form, som så
-renderer histogrammet, som man kan se med to forskellige kolonne input på figur ~\ref{fig:one} og ~\ref{fig:two}. 
-Jeg har valgt at repræsentere mit histogram med typen Color[][], hvor det ydre array indeholder 255 pladser, og de indre arrays indeholder hvor mange pixels der har den kombination 
-af rgb. Fordi jeg vælger at renderer hver enkelt pixel i arrayet til 1 pixel i min winform, har jeg måtte nød til at nedskalere alle listerne af pixels ved at dividere med 13, når jeg så 
-skal renderer y-aksens tekst felter ved jeg at jeg skal gange hver pixel der med 13 for at finde ud af hvor mange pixels der er i den givne søjle. Problemet med denne metode er dog at jeg 
-mister alle rgb kombinationer som har under 13 pixels der repræsentere denne. Så man kan dynamisk bestemme hvor mange kolonner der skal være ved at sætte variablen columnsWanted i Main/Run.fsx,
-problemet med den nuværende implementation er at jeg ikke kan give personen præcis mængden af kolonner der bliver efterspurgt men blot et estimat heraf, og det har noget at gøre med at jeg bruger
-heltal til at ligge kolonnerne sammen, sådan at jeg kan bruge disse tal som indexes når jeg skal arbejde med mine arrays. 
-
-\begin{center}
-\begin{figure}[!htb]
-  \makebox[\textwidth]{\includegraphics[width=\paperwidth]{one}}
-  \caption{Histogram med 255 kolonner}
-\label{fig:one}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[!htb]
-  \makebox[\textwidth]{\includegraphics[width=\paperwidth]{two}}
-  \caption{Histogram med 100 kolonner}
-\label{fig:two}
-\end{figure}
-\end{center}
 
 \end{document}
