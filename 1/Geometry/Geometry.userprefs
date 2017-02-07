@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{7C11C832-F35A-4489-9CD0-AB506F5AEE8F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Geometry/Program.cs">
+    <Files>
+      <File FileName="Geometry/Program.cs" Line="12" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Geometry PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
